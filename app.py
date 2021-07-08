@@ -84,7 +84,7 @@ def logout():
     # Clear session stored data
     session.clear()
     # Redirect user to logout endpoint
-    params = {'returnTo': url_for('home', _external=True), 'client_id': 'dAEbTiPZkN4DxECPnxK3ce2tXygS6WbR'}
+    params = {'returnTo': url_for('dashboard', _external=True), 'client_id': 'dAEbTiPZkN4DxECPnxK3ce2tXygS6WbR'}
     return redirect(auth0.api_base_url + '/v2/logout?' + urlencode(params))
 
 
